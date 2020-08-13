@@ -16,7 +16,7 @@ namespace Expresso.Services
             var client = new HttpClient();
             var  response = await client.GetStringAsync("https://coffeapi.azurewebsites.net/api/menus");
 
-            return JsonConvert.DeserializeObject<List> < Menu >> (response);
+            return JsonConvert.DeserializeObject<List< Menu >> (response);
 
 
         }

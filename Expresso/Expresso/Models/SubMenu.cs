@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expresso.Models
 {
-    class SubMenu
+    public class SubMenu
     {
         public int SubMenuId { get; set; }
         public string Name { get; set; }

@@ -6,10 +6,18 @@
              mc:Ignorable="d"
              x:Class="Expresso.Pages.MenuPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Menu Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView SeparatorVisibility="None" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Image HeightRequest="200" Aspect="Fill"/>
+                            <Label FontSize="Large" TextColor="White"HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Grid>
+                    </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
