@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Menu = Expresso.Models.Menu;
 
 namespace Expresso.Pages
 {
