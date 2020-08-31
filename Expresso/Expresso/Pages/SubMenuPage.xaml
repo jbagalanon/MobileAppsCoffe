@@ -3,17 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Expresso.Pages.SubMenuPage">
     <ContentPage.Content>
-        <ListView SeparatorVisibility="None" HasUnevenRows="True">
+        <ListView x:Name="LvSubMenu" SeparatorVisibility="None" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
-            <Image Height="200" Aspect="Fill"/>
+            <Image Source="{Binding Image}" HeightRequest="180" Aspect="Fill"/>
             <BoxView BackgroundColor="Black" Opacity="0.4"/>
             <StackLayout VerticalOptions="End" Margin="5">
-                <Label FontSize="Large" TextColor="Yellow"/>
-                <Label FontSize="Medium" TextColor="White"/>
-                <Label FontSize="Small" TextColor="White"/>
+                <Label Text="{Binding Name}" FontSize="Large" TextColor="Yellow"/>
+                <Label Text="{Binding Price}" FontSize="Medium" TextColor="White"/>
+                <Label Text="{Binding Description}" FontSize="Micro" TextColor="White"/>
             </StackLayout>
                         </Grid>
                     </ViewCell>
