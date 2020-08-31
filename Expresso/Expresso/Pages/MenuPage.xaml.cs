@@ -16,6 +16,7 @@ namespace Expresso.Pages
     public partial class MenuPage : ContentPage
     {
         public ObservableCollection<Menu> Menus;
+        public static bool First = true;
         public MenuPage()
         {
 
@@ -26,14 +27,29 @@ namespace Expresso.Pages
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            ApiServices apiServices = new ApiServices();
-            var menus = await apiServices.GetMenu();
 
-            foreach (var menu in menus)
+            if (First)
             {
-                Menus.Add(menu);
+                ApiServices apiServices = new ApiServices();
+                var menus = await apiServices.GetMenu();
+
+                foreach (var menu in menus)
+                {
+                    Menus.Add(menu);
+                }
+
+                LvMenu.ItemsSource = Menus;
             }
-            LvMenu.ItemsSource = Menus;
+
+            First = false;
+        }
+
+        private void LvMenu_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selectedMenu =  e.SelectedItem as Menu;
+            Navigation.PushAsync(new SubMenuPage(selectedMenu));
+
+
         }
     }
 }

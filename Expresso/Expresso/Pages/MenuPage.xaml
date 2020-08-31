@@ -6,9 +6,9 @@
              mc:Ignorable="d"
              x:Class="Expresso.Pages.MenuPage">
     <ContentPage.Content>
-        <ListView SeparatorVisibility="None" HasUnevenRows="True" x:Name="LvMenu">
-        <ListView.ItemTemplate>
-            <DataTemplate>
+        <ListView SeparatorVisibility="None" HasUnevenRows="True" x:Name="LvMenu" ItemSelected="LvMenu_OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
                     <ViewCell>
                         <Grid>
                             <Image Source="{Binding Image}" HeightRequest="200" Aspect="Fill"/>
@@ -18,8 +18,8 @@
                                    HorizontalOptions="Center" VerticalOptions="Center"/>
                         </Grid>
                     </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
+                </DataTemplate>
+            </ListView.ItemTemplate>
 
         </ListView>
     </ContentPage.Content>
