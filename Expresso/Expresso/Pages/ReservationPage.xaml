@@ -6,10 +6,17 @@
              mc:Ignorable="d"
              x:Class="Expresso.Pages.ReservationPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Reservation Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="10">
+          <Entry x:Name="EntName" Placeholder="Name"/>
+          <Entry x:Name="EntEmail" Placeholder="Email"/>
+          <Entry x:Name="EntPhone" Placeholder="Phone"/>
+          <Entry x:Name="EntTotalPeople" Placeholder="Total People"/>
+            <Label Text="Booking Date"/>
+           <DatePicker x:Name="DpBookingDate" Format="D" ></DatePicker>
+          <Label Text="Booking Time"></Label>
+          <TimePicker x:Name="TpBookingTime"></TimePicker>
+          <Button x:Name="BtnBookTable" Clicked="BtnBookTable_OnClicked" Text="Book Table" TextColor="White" FontSize="Medium"
+                  BackgroundColor="#f50057"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

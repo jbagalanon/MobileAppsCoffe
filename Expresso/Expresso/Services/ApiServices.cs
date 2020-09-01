@@ -20,7 +20,7 @@ namespace Expresso.Services
 
 
         }
-        public async Task<bool>  Reservation (Reservation reservation)
+        public async Task<bool>  ReserveTable (Reservation reservation)
         {
             var client = new HttpClient();
             var json = JsonConvert.SerializeObject(reservation);

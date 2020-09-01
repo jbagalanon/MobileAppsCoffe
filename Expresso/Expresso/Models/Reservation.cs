@@ -10,8 +10,8 @@ namespace Expresso.Models
         public string Email { get; set; }
         public string Phone { get; set; }
         public string TotalPeople { get; set; }
-        public DateTime Date { get; set; }
-        public DateTime Time { get; set; }
+        public string Date { get; set; }
+        public string Time { get; set; }
 
     }
 }
